@@ -1,2 +1,5 @@
 code my.csproj
 obj/
+"bin/Debug/net6.0/code my.dll"
+"bin/Debug/net6.0/code my.pdb"
+"bin/Debug/net6.0/ref/code my.dll"

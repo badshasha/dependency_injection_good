@@ -1,2 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using Microsoft.Extension.DependencyInjection;
+
+namespace injection
+{
+    public class MainProgram{
+
+        public static void Main(string[] args){
+            Console.WriteLine("working");
+
+            // install 
+        }
+
+    }
+    
+}

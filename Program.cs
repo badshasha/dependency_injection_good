@@ -1,15 +1,21 @@
 ﻿// See https://aka.ms/new-console-template for more information
-// using Microsoft.Extension.DependencyInjection;
+using Microsoft.Extension.DependencyInjection;
 
 namespace injection
 {
     public class MainProgram{
 
         public static void Main(string[] args){
-            
+             
 
-            IDomain DomainClass = new Domain();
-            Iui uiclass = new UI(DomainClass);
+            var collection = new SericeCollection();
+            collection.AddScope<IDomain,Domain>();
+
+            var provider = collection.BuildServiceProvied();
+            IDomain doaminInfo = provider.GetService<IDomain>();
+
+            // IDomain DomainClass = new Domain();
+            Iui uiclass = new UI(doaminInfo);
             uiclass.PrintInfo();
             
         }
